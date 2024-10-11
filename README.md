@@ -177,7 +177,8 @@ It will eventually contiinue to download the game and configs for Satisfactory
 
 ![image](https://github.com/user-attachments/assets/87b32cbd-452a-4975-924d-4088e2447fde)
 
-![image](https://github.com/user-attachments/assets/1ca6babc-43bf-41a6-9c52-84cd28e0b4a9)
+![image](https://github.com/user-attachments/assets/a0dad355-956d-4b2a-85d0-83b0531793af)
+
 
 Eventually, the game has loaded and is waiting for initial connection.
 

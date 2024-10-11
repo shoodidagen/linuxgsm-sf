@@ -179,6 +179,10 @@ It will eventually contiinue to download the game and configs for Satisfactory
 
 ![image](https://github.com/user-attachments/assets/1ca6babc-43bf-41a6-9c52-84cd28e0b4a9)
 
+Eventually, the game has loaded and is waiting for initial connection.
+
+![image](https://github.com/user-attachments/assets/5c62a3a2-2cc8-4438-beec-c3c8732d3b83)
+
 
 ## Firewall and Port Forwards
 

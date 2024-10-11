@@ -34,6 +34,7 @@ The following has had a lot of comments added to help understand what each comma
 #
 # https://github.com/GameServerManagers/docker-gameserver
 #
+
 # This is the base image we're starting with. It comes from LinuxGSM, a tool for managing game servers.
 FROM gameservermanagers/linuxgsm:ubuntu-22.04
 
@@ -95,6 +96,16 @@ volumes:
   data:
 ```
 
+- Service Name: Defines a service called linuxgsm-sf for the Satisfactory game server.
+- Image: Uses the Docker image gameservermanagers/gameserver:sf for the game server.
+- Container and Hostname: The container is named linuxgsm-sf, and the hostname inside the container is the same.
+- Network Mode: network_mode: host allows the game server to interact directly with the host's network, which is often necessary for game servers to handle traffic properly.
+- Volume: The data:/data volume ensures that game server data (like saved files) is stored persistently.
+- Environment File: Loads environment variables from a file called linuxgsm-sf.env (this file should be created and contains variables to configure the game server).
+- Restart Policy: The container will automatically restart unless you manually stop it, ensuring the game server stays online.
+- Volume Definition: Declares a named volume called data for persistent storage.
+
+
 ### environment file
 
 The environment file is just a best practice, this could also be put straight into the docker-compose.yml but this is a best practice.
@@ -109,9 +120,52 @@ TZ=Europe/London
 
 We use the Dockerfile to create a local custom image just for our use. 
 
-## Running the container for the first time
+To build the image, navigate to the directory where your Dockerfile is located.
+```bash
+cd /home/main/docker/old-non-swarm/linuxgsm-sf
+```
 
----
+In this example, the project folder is located in '/home/main/docker/~'. Adjust to suite.
+
+Once ready, run the following command to build the image
+
+```bash
+docker build --no-cache -t gameservermanagers/gameserver:sf .
+```
+
+Breakdown:
+- docker build: This command tells Docker to build an image using the Dockerfile in the current directory.
+- --no-cache: Forces Docker to ignore any cached layers and build the image from scratch. This ensures that any updates to the base image or dependencies are included.
+- -t gameservermanagers/gameserver:sf: Tags the built image with the name gameservermanagers/gameserver and gives it the tag sf. This helps you reference the image later when you want to run it.
+- . (dot): Specifies that the Dockerfile is located in the current directory.
+
+
+## Deploy and Run the container for the first time
+To deploy the container from the custom image, navigate to the directory where your Dockerfile is located.
+```bash
+cd /home/main/docker/old-non-swarm/linuxgsm-sf
+```
+
+Run the docker-compose up command to start the container in detached mode:
+```bash
+docker compose up -d
+```
+The above command will:
+- Start a container based on the image gameservermanagers/gameserver:sf.
+- Set up the environment from linuxgsm-sf.env.
+- Mount the specified volume to /data.
+- Use the host network mode (allowing the container to share the host's networking).
+- Automatically restart the container unless it’s explicitly stopped (restart: unless-stopped).
+
+## Firewall and Port Forwards
+
+Both TCP and UDP of port 7777 must be opened and forwarded as appropriate.
+
+If you are using the Uncomplicated Firewall (UFW) that comes shipped with Ubuntu, you can use the following line to open the firewall port required to allow peers to connect to the Satisfactory server.
+
+```bash
+sudo ufw allow 7777 comment 'Satisfactory Container'
+```
 
 ## Updating the server
 

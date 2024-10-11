@@ -139,6 +139,10 @@ Breakdown:
 - -t gameservermanagers/gameserver:sf: Tags the built image with the name gameservermanagers/gameserver and gives it the tag sf. This helps you reference the image later when you want to run it.
 - . (dot): Specifies that the Dockerfile is located in the current directory.
 
+<example of the command being run>
+
+![dockerComposeUp1](https://github.com/user-attachments/assets/cf5e3876-826f-443f-9939-692ca88c794e)
+
 
 ## Deploy and Run the container for the first time
 To deploy the container from the custom image, navigate to the directory where your Dockerfile is located.
@@ -156,6 +160,10 @@ The above command will:
 - Mount the specified volume to /data.
 - Use the host network mode (allowing the container to share the host's networking).
 - Automatically restart the container unless it’s explicitly stopped (restart: unless-stopped).
+
+<below is an example of this code being run>
+
+![dockerComposeUp2](https://github.com/user-attachments/assets/067d209c-b78e-4fff-828a-623f8ca8c6f0)
 
 ## Firewall and Port Forwards
 
@@ -196,3 +204,9 @@ docker compose down --volumes
 
 ![DockerComposeDown5](https://github.com/user-attachments/assets/7d27f92d-8b49-424c-a3fa-b3f139ef8691)
 
+You might want to clean up the images left over, especially if you want a clean start or are not confident that the existing images are up to 'scratch'.
+to do this, run the following command;
+
+```bash
+docker image prune
+```

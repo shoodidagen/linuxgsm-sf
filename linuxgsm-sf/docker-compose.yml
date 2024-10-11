@@ -1,0 +1,15 @@
+name: linuxgsm-sf
+services:
+  linuxgsm-sf:
+    image: gameservermanagers/gameserver:sf
+    container_name: linuxgsm-sf
+    hostname: linuxgsm-sf
+    network_mode: host
+    volumes:
+      - data:/data
+    env_file:
+      - linuxgsm-sf.env
+    restart: unless-stopped
+
+volumes:
+  data:

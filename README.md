@@ -194,6 +194,64 @@ If you are using the Uncomplicated Firewall (UFW) that comes shipped with Ubuntu
 sudo ufw allow 7777 comment 'Satisfactory Container'
 ```
 
+## Setting up Admin Passwords and Game Settings
+
+Open Satisfactory
+![image](https://github.com/user-attachments/assets/dfe37ad5-e2db-4d5e-840f-b60154439983)
+
+Click on 'Server Manager' and then select 'Add Server'.
+
+![image](https://github.com/user-attachments/assets/86e52700-f6c7-40d7-922c-03eedab3dc05)
+
+Enter the IP address (or DNS name) of the server and click 'confirm'.
+![image](https://github.com/user-attachments/assets/cbb80aec-0f4b-4732-9143-eff056d3538f)
+
+Accept the server Certificate
+
+![image](https://github.com/user-attachments/assets/913a50f6-5bbd-4736-80e1-68b543447153)
+
+Next, enter what you would like the server name to be. This is ususally what players will see when connecting.
+![image](https://github.com/user-attachments/assets/3b02f5ef-1fc7-4f59-a553-517241f5c678)
+
+Then Set an Admin password
+![image](https://github.com/user-attachments/assets/93a7f1ec-2cf4-444d-be86-831cd7ab7e84)
+
+Once the Admin password has been set, head over to 'Server Settings' shown below
+![image](https://github.com/user-attachments/assets/d1c0a3c3-33d1-4fb2-8366-35450beaf274)
+
+Set the Player Password (the password other players will need to use in order to successfully connect)
+
+![image](https://github.com/user-attachments/assets/3c3f54fa-4337-423e-8101-f7cd9c6659a7)
+
+and adjust any other settings here. Hit 'APPLY' when done.
+When ready, head towards the 'Create Game' tab, shown below
+![image](https://github.com/user-attachments/assets/2d6feaff-4890-4d25-b590-d40debc46f19)
+
+Select a starting map and give it a name.
+![image](https://github.com/user-attachments/assets/b4a62b22-d854-45aa-accd-ace7a39fa21b)
+![image](https://github.com/user-attachments/assets/1340724c-44bd-4fca-910c-9baf6ff33d6f)
+
+It will take a while for the server to be ready to join
+![image](https://github.com/user-attachments/assets/8e8afa4e-903b-43e6-8552-662a77433e36)
+
+![image](https://github.com/user-attachments/assets/3b4e5d3b-0ba0-4611-a4a2-4ad9e8d9b09c)
+
+
+## Joining a friends Server
+Open Satisfactory
+![image](https://github.com/user-attachments/assets/dfe37ad5-e2db-4d5e-840f-b60154439983)
+
+Click on 'Server Manager' and then select 'Add Server'.
+
+![image](https://github.com/user-attachments/assets/86e52700-f6c7-40d7-922c-03eedab3dc05)
+
+Enter the IP address (or DNS name) of the server and click 'confirm'.
+![image](https://github.com/user-attachments/assets/cbb80aec-0f4b-4732-9143-eff056d3538f)
+
+Accept the server Certificate
+
+![image](https://github.com/user-attachments/assets/913a50f6-5bbd-4736-80e1-68b543447153)
+
 ## Updating the server
 
 ---

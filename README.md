@@ -165,6 +165,21 @@ The above command will:
 
 ![dockerComposeUp2](https://github.com/user-attachments/assets/067d209c-b78e-4fff-828a-623f8ca8c6f0)
 
+You can run the following command to tail the logs of the container and see the console output. 
+```bash
+docker logs -f linuxgsm-sf
+```
+
+Note - it will look like it has frozen at this point but it has not
+![image](https://github.com/user-attachments/assets/68368484-f472-481e-aef4-5ae16ebdcfaa)
+
+It will eventually contiinue to download the game and configs for Satisfactory
+
+![image](https://github.com/user-attachments/assets/87b32cbd-452a-4975-924d-4088e2447fde)
+
+![image](https://github.com/user-attachments/assets/1ca6babc-43bf-41a6-9c52-84cd28e0b4a9)
+
+
 ## Firewall and Port Forwards
 
 Both TCP and UDP of port 7777 must be opened and forwarded as appropriate.

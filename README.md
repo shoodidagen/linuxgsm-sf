@@ -11,12 +11,12 @@ Satisfactory can be run on LinuxGSM. This is also easy via Docker containers.
 ## Install instructions
 
 You need the following files in the following structure on your Linux Ubuntu OS.
-
+```bash
 /linuxgsm-sf/
 │── Dockerfile
 │── docker-compose.yml
 └── linuxgsm-sf.env
-
+```
 ### Dockerfile
 
 The following was taken from https://github.com/GameServerManagers/docker-gameserver/blob/main/dockerfiles/Dockerfile.sf

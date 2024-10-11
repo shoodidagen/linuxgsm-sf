@@ -122,7 +122,7 @@ We use the Dockerfile to create a local custom image just for our use.
 
 To build the image, navigate to the directory where your Dockerfile is located.
 ```bash
-cd /home/main/docker/old-non-swarm/linuxgsm-sf
+cd ~/linuxgsm-sf
 ```
 
 In this example, the project folder is located in '/home/main/docker/~'. Adjust to suite.
@@ -143,7 +143,7 @@ Breakdown:
 ## Deploy and Run the container for the first time
 To deploy the container from the custom image, navigate to the directory where your Dockerfile is located.
 ```bash
-cd /home/main/docker/old-non-swarm/linuxgsm-sf
+cd ~/linuxgsm-sf
 ```
 
 Run the docker-compose up command to start the container in detached mode:
@@ -171,4 +171,28 @@ sudo ufw allow 7777 comment 'Satisfactory Container'
 
 ---
 
-## 
+## Removing Container and Volumes
+
+For server wipes you may wish to remove the container config and the data at the same time.
+The commands shown below are used to stop and remove the resources created by a Docker Compose application, including the volumes associated with the services defined in your docker-compose.yml file
+
+First make sure you are in the location where the existing docker-compose.yml sits. You may need to adjust this to suite. For example, if your project sits in ```/home/username/documents/linuxgsm-sf```, you would put ```cd /home/username/documents/linuxgsm-sf```.
+```bash
+cd ~/linuxgsm-sf
+```
+
+Then stop the container and remove the volumes.
+
+```bash
+docker compose down --volumes
+```
+![DockerComposeDown](https://github.com/user-attachments/assets/90be66e8-6019-41e7-bfdf-5621e7c298f3)
+
+![DockerComposeDown2](https://github.com/user-attachments/assets/15a7d340-bb5c-4a95-b3fc-df84209e9c5b)
+
+![DockerComposeDown3](https://github.com/user-attachments/assets/6a41c24a-11c1-4c80-8b69-d09b20e0c725)
+
+![DockerComposeDown4](https://github.com/user-attachments/assets/3c1d7bcd-a50b-442a-a103-c0b93993424d)
+
+![DockerComposeDown5](https://github.com/user-attachments/assets/7d27f92d-8b49-424c-a3fa-b3f139ef8691)
+

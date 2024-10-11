@@ -8,9 +8,13 @@ LinuxGSM is a command-line tool for quick, simple deployment and management of L
 
 Satisfactory can be run on LinuxGSM. This is also easy via Docker containers.
 
+The following assumes you have at least the following prereq
+- Ubuntu 24.02
+- Docker 27.2.0
+
 ## Install instructions
 
-You need the following files in the following structure on your Linux Ubuntu OS.
+You need the following files in the following structure on your Linux Ubuntu OS. These files are available to download via this Git page.
 ```bash
 /linuxgsm-sf/
 │── Dockerfile
